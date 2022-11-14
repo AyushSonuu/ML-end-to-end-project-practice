@@ -9,7 +9,7 @@ def index():
 
 @app.route("/x",methods=['GET','POST'])
 def x():
-    return render_templete(index.html)
+    return render_templete("index.html")
 
 if __name__ == "__main__":
     app.run(debug = True)
