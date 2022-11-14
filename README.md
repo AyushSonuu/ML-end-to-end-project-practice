@@ -8,3 +8,8 @@
 '''
 conda create -p venv python==3.10 -y
 '''
+
+heroku
+API KEY : "31e12ba1-6251-48f6-bd46-20346ad64416"
+email : "sonuayush55@gmail.com"
+APP NAME : "ml-end-to-end-project"
