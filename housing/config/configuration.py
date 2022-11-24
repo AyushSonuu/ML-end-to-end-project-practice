@@ -61,6 +61,8 @@ class configuration:
                 ingested_train_dir = ingested_train_dir, 
                 ingested_test_dir = ingested_test_dir
             )        
+            logging.info(f"Data Ingestion config: {data_ingestion_config}")
+            return data_ingestion_config
         except Exception as e :
             raise HousingException(e,sys) from e
 
