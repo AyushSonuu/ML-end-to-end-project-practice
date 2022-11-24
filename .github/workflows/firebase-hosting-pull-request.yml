@@ -12,6 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
       # Check-out your repository.
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,6 +22,11 @@ jobs:
 
       - name: Build, Push and Release a Docker container to firebase. # Your custom step name
         uses: FirebaseExtended/action-hosting-deploy@v0 # GitHub action name (leave it as it is).
+=======
+      - uses: actions/checkout@v2
+      - run: Dockerfile
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+>>>>>>> 06aad204ea3da2823f0af1cd8f061d6b3316918c
         with:
           # Below you must provide variables for your Heroku app.
 
