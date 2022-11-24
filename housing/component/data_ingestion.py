@@ -31,7 +31,7 @@ class DataIngestion:
             if os.path.exists(tgz_download_dir):
                 os.remove(tgz_download_dir)
 
-            os.makedirs(housing_file_name,exist_ok=True)
+            os.makedirs(tgz_download_dir,exist_ok=True)
 
             tgz_file_path = os.path.join(tgz_download_dir,housing_file_name)
 
@@ -55,8 +55,8 @@ class DataIngestion:
 
             logging.info(f"extracting tgz file : [{tgz_file_path}] into dir:[{raw_data_dir}]")
 
-            with tarfile.open(raw_data_dir) as hpusing_tgz_file_obj:
-                hpusing_tgz_file_obj.extractall(path=raw_data_dir)
+            with tarfile.open(raw_data_dir) as housing_tgz_file_obj:
+                housing_tgz_file_obj.extractall(path=raw_data_dir)
 
             logging.info(f"Extraction comppleated")
 
