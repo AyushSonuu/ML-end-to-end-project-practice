@@ -29,12 +29,12 @@ class Configuration:
             data_ingestion_info = self.config_info[DATA_INGESTION_CONFIG_KEY]
 
             dataset_download_url = data_ingestion_info[DATA_INGESTION_DOWNLOAS_URL_KEY]
-            artifact_dir = self.get_training_pipeline_config()
+            artifact_dir = self.training_pipeline_config.artifact_dir
             data_ingestion_artifact_dir = os.path.join(
-                artifact_dir,
-                DATA_INGESTION_ARTIFACT_DIR,
-                self.time_stamp
-            )
+                                                            artifact_dir,
+                                                            DATA_INGESTION_ARTIFACT_DIR,
+                                                            self.time_stamp
+                                                        )
             tgz_download_dir = os.path.join(
                 data_ingestion_artifact_dir,
                 data_ingestion_info[DATA_INGESTION_TGZ_DOWNLOAD_DIR_KEY]
