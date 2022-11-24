@@ -11,7 +11,7 @@ from housing.logger import logging
 ROOT_DIR = os.getcwd() # to get current working directory
 
 
-class configuration:
+class Configuration:
 
     def __init__(self,
                 config_file_path=CONFIG_FILE_PATH,
