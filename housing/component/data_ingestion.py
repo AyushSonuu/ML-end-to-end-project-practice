@@ -55,7 +55,7 @@ class DataIngestion:
 
             logging.info(f"extracting tgz file : [{tgz_file_path}] into dir:[{raw_data_dir}]")
 
-            with tarfile.open(raw_data_dir) as housing_tgz_file_obj:
+            with tarfile.open(tgz_file_path) as housing_tgz_file_obj:
                 housing_tgz_file_obj.extractall(path=raw_data_dir)
 
             logging.info(f"Extraction comppleated")
@@ -87,7 +87,7 @@ class DataIngestion:
 
             for train_index , test_index in split.split(housing_data_frame,housing_data_frame["income_cat"]):
                 strat_train_set = housing_data_frame.loc[train_index].drop(["income_cat"],axis =1)
-                strat_test_set = housing_data_frame.loc[test_index].drop(["income_cat"])
+                strat_test_set = housing_data_frame.loc[test_index].drop(["income_cat"],axis =1)
 
             train_file_path = os.path.join(self.data_ingestion_config.ingested_train_dir,file_name)
 

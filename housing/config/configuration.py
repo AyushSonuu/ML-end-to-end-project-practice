@@ -40,7 +40,7 @@ class Configuration:
                 data_ingestion_info[DATA_INGESTION_TGZ_DOWNLOAD_DIR_KEY]
             )
             raw_data_dir = os.path.join(data_ingestion_artifact_dir,
-            data_ingestion_info[DATA_INGESTION_RAW_DATA_DIR_KEY])
+                                        data_ingestion_info[DATA_INGESTION_RAW_DATA_DIR_KEY])
             ingested_data_dir = os.path.join(
                 data_ingestion_artifact_dir,
                 data_ingestion_info[DATA_INGESTION_DIR_NAME_KEY]
@@ -51,7 +51,7 @@ class Configuration:
             )
             ingested_test_dir = os.path.join(
                 ingested_data_dir,
-                DATA_INGESTION_TEST_DIR_KEY
+                data_ingestion_info[DATA_INGESTION_TEST_DIR_KEY]
             )
 
             data_ingestion_config = DataIngestionConfig(
